@@ -4,6 +4,10 @@ A responsive React-based e-commerce admin dashboard built as a functional fronte
 
 The project provides product browsing, shopping cart management, mock admin authentication, checkout functionality, error handling, responsive design, performance monitoring, and a live debugging panel.
 
+## Live Demo
+
+[View the live E-Commerce Dashboard](https://nishigandhachoudhury.github.io/E-Commerce-Dashboard/)
+
 ## Features
 
 ### Product Listing and Management
