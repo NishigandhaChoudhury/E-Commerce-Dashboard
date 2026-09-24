@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# E-Commerce Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive React-based e-commerce admin dashboard built as a functional frontend application.
 
-## Available Scripts
+The project provides product browsing, shopping cart management, mock admin authentication, checkout functionality, error handling, responsive design, performance monitoring, and a live debugging panel.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Product Listing and Management
+- Displays products with:
+  - Product image
+  - Product name
+  - Category
+  - Rating
+  - Price
+  - Stock information
+- Add products to the shopping cart.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Shopping Cart
+- Add products to cart.
+- Increase or decrease product quantity.
+- Remove products from cart.
+- Automatically calculates individual item totals.
+- Automatically calculates the overall cart total.
+- Displays the number of products in the cart.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Mock User Authentication
+- Mock Admin login.
+- Displays logged-in Admin status.
+- Logout functionality.
+- No real backend authentication is used.
 
-### `npm test`
+### Checkout
+- Checkout form with:
+  - Name
+  - Email
+  - Address
+- Basic form validation.
+- Prevents checkout when the cart is empty.
+- Displays order confirmation after successful submission.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Error Handling
+- Implemented React Error Boundary.
+- Displays a user-friendly error screen when a component encounters an error.
+- Provides a Try Again option.
 
-### `npm run build`
+### Responsive Design
+- Responsive layout for desktop, tablet, and mobile screen sizes.
+- Responsive product grid.
+- Responsive navigation and dashboard cards.
+- Separate responsive stylesheet.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Performance Monitoring
+- Measures product loading time using the browser Performance API.
+- Displays product API load time in milliseconds.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Live Debugging
+A live debug panel displays:
+- Authentication status
+- Cart item count
+- Product loading performance
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- React.js
+- JavaScript
+- React Router DOM
+- Axios
+- Bootstrap
+- React Error Boundary
+- CSS
+- CSS Modules
+- Create React App
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+ecommerce-dashboard/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Navigation.jsx
+│   │   ├── ProductCard.jsx
+│   │   ├── ProductList.jsx
+│   │   ├── Cart.jsx
+│   │   ├── CartItem.jsx
+│   │   ├── CheckoutForm.jsx
+│   │   ├── ErrorBoundary.jsx
+│   │   └── DebugPanel.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Products.jsx
+│   │   ├── Cart.jsx
+│   │   └── Checkout.jsx
+│   │
+│   ├── styles/
+│   │   ├── App.css
+│   │   ├── components.module.css
+│   │   ├── variables.css
+│   │   └── responsive.css
+│   │
+│   ├── utils/
+│   │   ├── mockData.js
+│   │   ├── api.js
+│   │   └── helpers.js
+│   │
+│   ├── App.jsx
+│   ├── index.js
+│   └── index.css
+│
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
